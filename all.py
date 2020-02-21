@@ -1,3 +1,4 @@
+# import Librarys
 from time import sleep
 from sense_hat import SenseHat
 
@@ -26,4 +27,4 @@ while True:
     print("p: {pitch}, r: {roll}, y: {yaw}".format(**accel_only))
     #print(event)
     print("The joystick event was " + str(event))
-    sleep(0.5)
+    sleep(2)
