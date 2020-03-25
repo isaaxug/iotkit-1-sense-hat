@@ -1,15 +1,15 @@
-# import Librarys
+# -*- coding: utf-8 -*-
+# ライブラリのインポート
 from time import sleep
 from sense_hat import SenseHat
-
-
-# setting IMUs and sensors
+ 
+ 
+# IMUセンサーのセッティング
 sense = SenseHat()
 sense.set_imu_config(False, True, False)
-
-# for stopping push "contorol + c"
+ 
 while True:
-    #getting sensors data
+    # センサーデータ取得
     humidity = sense.get_humidity()
     temp = sense.get_temperature()
     pressure = sense.get_pressure()
@@ -25,6 +25,6 @@ while True:
     print("North: %s" % north)
     print("p: {pitch}, r: {roll}, y: {yaw}".format(**gyro_only))
     print("p: {pitch}, r: {roll}, y: {yaw}".format(**accel_only))
-    #print(event)
     print("The joystick event was " + str(event))
+    # 2秒間の停止 
     sleep(2)
