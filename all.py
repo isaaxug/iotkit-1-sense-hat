@@ -2,12 +2,12 @@
 # ライブラリのインポート
 from time import sleep
 from sense_hat import SenseHat
- 
- 
+
+
 # IMUセンサーのセッティング
 sense = SenseHat()
 sense.set_imu_config(False, True, False)
- 
+
 while True:
     # センサーデータ取得
     humidity = sense.get_humidity()
@@ -26,5 +26,6 @@ while True:
     print("p: {pitch}, r: {roll}, y: {yaw}".format(**gyro_only))
     print("p: {pitch}, r: {roll}, y: {yaw}".format(**accel_only))
     print("The joystick event was " + str(event))
-    # 2秒間の停止 
+    print("-----")
+    # 2秒間の停止
     sleep(2)
